@@ -1,0 +1,28 @@
+*.DS_Store
+App\ Store/
+App\ Store/*
+bin/build_fts.sql
+bin/cerod_build
+bin/sqlite3_cerod_shell
+build/*
+build/
+DerivedData/*
+DerivedData/
+*.xcworkspace
+*.xcuserdata/
+*.xcuserdata/*
+*_build
+*_shell
+*.d
+*.o
+*.hmap
+DB/password
+DB/DBPassword.c
+DB/cerod/*.cerod
+
+# Exclude CocoaPods pods from
+[Pp]ods/*
+
+.idea
+
+
