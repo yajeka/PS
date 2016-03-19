@@ -1,2 +1,7 @@
 # Exclude CocoaPods pods from
 [Pp]ods/*
+
+
+*.xcworkspace
+*.xcuserdata/
+*.xcuserdata/*
