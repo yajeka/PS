@@ -1,7 +1,8 @@
+.DS_Store
+build
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
 # Exclude CocoaPods pods from
 [Pp]ods/*
-
-
-*.xcworkspace
-*.xcuserdata/
-*.xcuserdata/*
+PS.xcworkspace/xcuserdata/
+*/yauheniyarotski.xcuserdatad/*
