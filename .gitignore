@@ -1,5 +1,4 @@
 *.DS_Store
-_wwbin/mod_pbxproj.pyc
 App\ Store/
 App\ Store/*
 bin/build_fts.sql
