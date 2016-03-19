@@ -21,6 +21,36 @@ class PSTests: XCTestCase {
         super.tearDown()
     }
     
+    func testRegisterNewDevice() {
+        Parse.setApplicationId("lARUxNeUrMj0KQxltNnBwzhpkhrpUpEXuUTfr1Ca", clientKey: "kmrT8qwZxJzKLJewJBzVH2MM85nHFCO0AyY5lBIv");
+        
+        var task = PFCloud.callFunctionInBackground("findByUid", withParameters: ["uid":"uid1"]);
+        task.waitUntilFinished()
+        print(task)
+        
+        task = PFCloud.callFunctionInBackground("findByEmailAndPassword", withParameters: ["email":"account2@account2" , "password":"account2"]);
+        task.waitUntilFinished()
+        print(task)
+        
+    }
+    
+    func createAccounts() {
+        var accounts:[PFObject] = []
+        for (var i=1; i<11; i++) {
+            let account = PFObject(className: "Account")
+            account["uids"] = ["uid\(i)"]
+            account["email"] = "account\(i)@account\(i)"
+            account["password"] = "account\(i)"
+            accounts += [account]
+        }
+        do {
+            try PFObject.saveAll(accounts)
+        }
+        catch {
+            print("error")
+        }
+    }
+    
     func testExample() {
         Parse.setApplicationId("lARUxNeUrMj0KQxltNnBwzhpkhrpUpEXuUTfr1Ca", clientKey: "kmrT8qwZxJzKLJewJBzVH2MM85nHFCO0AyY5lBIv");
         
