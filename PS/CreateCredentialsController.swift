@@ -15,7 +15,7 @@ class CreateCredentialsController: UIViewController, UITextFieldDelegate, Regist
     
     let kToMyProfileSeg = "toMyProfileSeg"
     
-    private lazy var initialViewModel:RegisterViewModel = {
+    private lazy var registerViewModel:RegisterViewModel = {
         return RegisterViewModel.init(view: self)
     }()
 
@@ -47,7 +47,8 @@ class CreateCredentialsController: UIViewController, UITextFieldDelegate, Regist
         } else if textField === passwordTextField {
             if passwordTextField.text?.characters.count > -1 {
                 //service calse and //        performSegueWithIdentifier(<#T##identifier: String##String#>, sender: <#T##AnyObject?#>)
-                performSegueWithIdentifier(kToMyProfileSeg, sender: textField)
+//                performSegueWithIdentifier(kToMyProfileSeg, sender: textField)
+                self.registerViewModel.register(self.emailTextField.text!, password: self.passwordTextField.text!)
             }
         }
         return false

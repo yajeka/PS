@@ -17,4 +17,13 @@ class RegisterViewModel: AnyObject {
     init (view: RegisterView) {
         self.view = view
     }
+    
+    internal func register (email:String, password:String){
+        
+        let uuid = NSUUID().UUIDString
+        
+        BackendManager.signUp(uuid, email: email, password: password) { (success, error) -> Void in
+            print("signup")
+        }
+    }
 }
