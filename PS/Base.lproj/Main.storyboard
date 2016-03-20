@@ -385,7 +385,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Ps.png" width="22" height="22"/>
+        <image name="Ps.png" width="320" height="2772"/>
         <image name="button_login" width="280" height="75"/>
         <image name="photo" width="58" height="58"/>
         <image name="search_partner" width="16" height="16"/>

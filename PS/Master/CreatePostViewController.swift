@@ -35,7 +35,7 @@ class CreatePostViewController : UITableViewController {
     func doneActivated() {
         
         self.tabBarController?.selectedIndex = 0
-        dismissViewControllerAnimated(true, completion: nil)    
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func toggleDone() {
