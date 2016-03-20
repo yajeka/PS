@@ -7,15 +7,38 @@
 //
 
 import UIKit
+import Parse
+
+protocol MainView {
+    func startInitial()
+    func showUserWithInfo(userInfo:Dictionary<String,String>)
+    func openRegisterUserScreen()
+}
 
 class MainViewModel: NSObject {
-
+    
+    let view: MainView
+    
+    init (view: MainView) {
+        self.view = view
+    }
+    
     internal func runMainModel() {
+        
+        self.initParse()
         self.checkAccount()
     }
     
-    private func checkAccount () {
+    private func initParse() {
+        Parse.setApplicationId("lARUxNeUrMj0KQxltNnBwzhpkhrpUpEXuUTfr1Ca", clientKey: "kmrT8qwZxJzKLJewJBzVH2MM85nHFCO0AyY5lBIv")
+    }
     
+    private func checkAccount () {
+        let uuid = NSUUID().UUIDString
+
+        BackendManager.findByUid(uuid) { (result: AnyObject?, error: NSError?) -> Void in
+            self.view.openRegisterUserScreen()
+        }
     }
     
 }
