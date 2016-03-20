@@ -12,7 +12,7 @@
         <scene sceneID="XQ5-Sw-nt8">
             <objects>
                 <navigationController id="PcB-ik-K3O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="FMu-jN-EhF"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile_icon" id="FMu-jN-EhF"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gQP-dZ-R7X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -41,8 +41,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coupleImage" translatesAutoresizingMaskIntoConstraints="NO" id="vZX-7b-6xy">
                                 <rect key="frame" x="-4" y="64" width="328" height="455"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Le-k3-pg3">
-                                <rect key="frame" x="186" y="64" width="134" height="101"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Le-k3-pg3">
+                                <rect key="frame" x="117" y="0.0" width="207" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="218" id="3tR-aE-yWF"/>
+                                    <constraint firstAttribute="width" constant="207" id="eCc-1T-Tgt"/>
+                                </constraints>
                                 <connections>
                                     <action selector="createPostButtonPressed:" destination="2Va-l8-qjP" eventType="touchUpInside" id="9Eh-s1-BfS"/>
                                 </connections>
@@ -50,6 +54,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5Le-k3-pg3" firstAttribute="top" secondItem="UGD-jG-IZm" secondAttribute="topMargin" id="6g9-w7-nn4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Le-k3-pg3" secondAttribute="trailing" constant="-20" id="Hht-wF-8Zd"/>
                             <constraint firstItem="4Lw-zX-oP9" firstAttribute="top" secondItem="vZX-7b-6xy" secondAttribute="bottom" id="LQg-BJ-3pe"/>
                             <constraint firstItem="vZX-7b-6xy" firstAttribute="top" secondItem="UJb-Aw-Tgq" secondAttribute="bottom" id="Rp6-Mr-XAk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vZX-7b-6xy" secondAttribute="trailing" constant="-20" id="Sox-bR-WVW"/>
@@ -941,7 +947,7 @@
         <scene sceneID="tAh-Wq-fMR">
             <objects>
                 <navigationController id="JHc-fZ-bHd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="ny5-LZ-Y1b"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home_icon" id="ny5-LZ-Y1b"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DHm-l1-ODy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -958,7 +964,7 @@
         <scene sceneID="QVm-gF-ACI">
             <objects>
                 <navigationController id="Dg6-qn-rQK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" id="eUw-9I-GDZ"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="Calendar_icon" id="eUw-9I-GDZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="unk-JL-jBe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -975,7 +981,7 @@
         <scene sceneID="35A-IV-Znv">
             <objects>
                 <navigationController id="GKE-AI-CEE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="wdo-Yk-TzF"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search_icon" id="wdo-Yk-TzF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oxw-jW-cxO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -990,6 +996,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Calendar_icon" width="19" height="19"/>
+        <image name="Home_icon" width="21" height="17"/>
+        <image name="Profile_icon" width="18" height="18"/>
+        <image name="Search_icon" width="18" height="18"/>
         <image name="com-culture" width="40" height="41"/>
         <image name="com-out" width="44" height="42"/>
         <image name="com-travel" width="44" height="43"/>
