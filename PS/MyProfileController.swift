@@ -29,11 +29,11 @@ class MyProfileController: UIViewController, UIImagePickerControllerDelegate, UI
         
         nameTextField.becomeFirstResponder()
         
-        nameTextField.text = ""
-        lastNameTextField.text = ""
-        birthDateTextField.text = ""
-        genderTextField.text = ""
-        sexualOrienationTextField.text = ""
+        nameTextField.text = "Yry"
+        lastNameTextField.text = "Brankovsky"
+        birthDateTextField.text = "09.12.1992"
+        genderTextField.text = "Male"
+        sexualOrienationTextField.text = "Heterosexual"
         
         nameTextField.delegate = self
         lastNameTextField.delegate = self
@@ -58,6 +58,8 @@ class MyProfileController: UIViewController, UIImagePickerControllerDelegate, UI
             addPhotoButton.layer.masksToBounds = true
         addPhotoButton.layer.borderWidth = 3
         addPhotoButton.layer.borderColor = UIColor.whiteColor().CGColor
+        addPhotoButtonChangeImage(UIImage(named: "man")!)
+        
 //        }
     }
     
