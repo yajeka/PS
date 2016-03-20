@@ -20,5 +20,10 @@ class ListPostsTableViewController: UIViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+         self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 
+    
 }
