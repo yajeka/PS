@@ -29,7 +29,7 @@ class MyProfileController: UIViewController, UIImagePickerControllerDelegate, UI
         
         nameTextField.becomeFirstResponder()
         
-        nameTextField.text = "Yry"
+        nameTextField.text = "Yury"
         lastNameTextField.text = "Brankovsky"
         birthDateTextField.text = "09.12.1992"
         genderTextField.text = "Male"

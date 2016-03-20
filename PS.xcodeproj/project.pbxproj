@@ -30,6 +30,8 @@
 		F72AA3A01C9C1D6700C4B25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72AA39F1C9C1D6700C4B25F /* Assets.xcassets */; };
 		F72AA3A31C9C1D6700C4B25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72AA3A11C9C1D6700C4B25F /* LaunchScreen.storyboard */; };
 		F78CB97F1C9EAA9A00C03ECF /* UIViewController+UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78CB97E1C9EAA9A00C03ECF /* UIViewController+UIAlert.swift */; };
+		F7CEB6951C9EE4DF00AB519C /* profileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CEB6941C9EE4DF00AB519C /* profileController.swift */; };
+		F7CEB6991C9EE89600AB519C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CEB6981C9EE89600AB519C /* TabBarController.swift */; };
 		FCFE7C73092F26B1AA0BF2B0 /* Pods_PS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB83E753367D31006F97B12 /* Pods_PS.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		F72AA3A21C9C1D6700C4B25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F72AA3A41C9C1D6700C4B25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F78CB97E1C9EAA9A00C03ECF /* UIViewController+UIAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlert.swift"; sourceTree = "<group>"; };
+		F7CEB6941C9EE4DF00AB519C /* profileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileController.swift; sourceTree = "<group>"; };
+		F7CEB6981C9EE89600AB519C /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				8DFBB16E1C9EB800006E4D1A /* CreatePostMoodView.swift */,
 				8DFBB1701C9EBB14006E4D1A /* CreatePostInputView.swift */,
 				8DFBB1721C9EBF4D006E4D1A /* CreatePostScriptumView.swift */,
+				F7CEB6941C9EE4DF00AB519C /* profileController.swift */,
+				F7CEB6981C9EE89600AB519C /* TabBarController.swift */,
 			);
 			path = Master;
 			sourceTree = "<group>";
@@ -359,6 +365,8 @@
 				A8AE0A131C9EA2CF003C7207 /* MainViewModel.swift in Sources */,
 				8DFBB1731C9EBF4D006E4D1A /* CreatePostScriptumView.swift in Sources */,
 				8DFBB1711C9EBB14006E4D1A /* CreatePostInputView.swift in Sources */,
+				F7CEB6991C9EE89600AB519C /* TabBarController.swift in Sources */,
+				F7CEB6951C9EE4DF00AB519C /* profileController.swift in Sources */,
 				70F6ABAF1C9E92B100646FAA /* BackendManager.swift in Sources */,
 				8DFBB16D1C9EB4F1006E4D1A /* CreatePostViewController.swift in Sources */,
 				F7215E2B1C9D5ECF007B0D07 /* InitialController.swift in Sources */,
