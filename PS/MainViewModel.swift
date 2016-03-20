@@ -11,7 +11,7 @@ import Parse
 
 protocol MainView {
     func startInitial()
-    func showUserWithInfo(userInfo:Dictionary<String,String>)
+    func openLoginScreen()
     func openRegisterUserScreen()
 }
 

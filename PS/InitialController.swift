@@ -58,8 +58,8 @@ class InitialController: UIViewController, MainView {
         // TODO: implement progress view for find and login user
     }
     
-    func showUserWithInfo(userInfo: Dictionary<String, String>) {
-        // TODO: implement open new screen with show user
+    func openLoginScreen() {
+        // TODO: implement login screen
     }
     
     func openRegisterUserScreen() {
