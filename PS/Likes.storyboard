@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Likes View Controller-->
+        <scene sceneID="wHJ-8O-e32">
+            <objects>
+                <viewController id="7hI-It-mHj" customClass="LikesViewController" customModule="PS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BBY-Oc-4Ck"/>
+                        <viewControllerLayoutGuide type="bottom" id="PDW-g7-x1b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gpI-Es-kFW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYO-Lf-98K">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="likes_opacity.png" translatesAutoresizingMaskIntoConstraints="NO" id="dOj-7Z-j3A">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="397"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="397" id="oyE-e7-61o"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dOj-7Z-j3A" secondAttribute="trailing" id="DN8-Fp-aLn"/>
+                                    <constraint firstAttribute="bottom" secondItem="dOj-7Z-j3A" secondAttribute="bottom" id="IY6-br-1dD"/>
+                                    <constraint firstItem="dOj-7Z-j3A" firstAttribute="leading" secondItem="BYO-Lf-98K" secondAttribute="leading" id="Ouf-9P-O8A"/>
+                                    <constraint firstItem="dOj-7Z-j3A" firstAttribute="top" secondItem="BYO-Lf-98K" secondAttribute="top" id="TLn-bj-h2h"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.73333333333333328" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PDW-g7-x1b" firstAttribute="top" secondItem="BYO-Lf-98K" secondAttribute="bottom" id="AwT-iC-8c1"/>
+                            <constraint firstAttribute="trailing" secondItem="BYO-Lf-98K" secondAttribute="trailing" id="HHv-X0-9dj"/>
+                            <constraint firstItem="PDW-g7-x1b" firstAttribute="top" secondItem="BYO-Lf-98K" secondAttribute="bottom" id="OXJ-Pp-Z0S"/>
+                            <constraint firstItem="BYO-Lf-98K" firstAttribute="top" secondItem="BBY-Oc-4Ck" secondAttribute="bottom" id="g99-Oh-JGW"/>
+                            <constraint firstAttribute="trailing" secondItem="BYO-Lf-98K" secondAttribute="trailing" id="gTV-rz-GvE"/>
+                            <constraint firstItem="BYO-Lf-98K" firstAttribute="leading" secondItem="gpI-Es-kFW" secondAttribute="leading" id="sUh-np-q4J"/>
+                            <constraint firstItem="BYO-Lf-98K" firstAttribute="leading" secondItem="gpI-Es-kFW" secondAttribute="leading" id="vEM-n4-Ses"/>
+                            <constraint firstItem="BYO-Lf-98K" firstAttribute="top" secondItem="BBY-Oc-4Ck" secondAttribute="bottom" id="yBk-uF-3wR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gTV-rz-GvE"/>
+                                <exclude reference="vEM-n4-Ses"/>
+                                <exclude reference="yBk-uF-3wR"/>
+                                <exclude reference="OXJ-Pp-Z0S"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zd5-VF-NbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="62"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="likes_opacity.png" width="320" height="396"/>
+    </resources>
+</document>
