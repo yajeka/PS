@@ -18,6 +18,8 @@ protocol MainView {
 class MainViewModel: NSObject {
     
     let view: MainView
+    let appID = "lARUxNeUrMj0KQxltNnBwzhpkhrpUpEXuUTfr1Ca"
+    let clientKey = "kmrT8qwZxJzKLJewJBzVH2MM85nHFCO0AyY5lBIv"
     
     init (view: MainView) {
         self.view = view
@@ -30,7 +32,7 @@ class MainViewModel: NSObject {
     }
     
     private func initParse() {
-        Parse.setApplicationId("lARUxNeUrMj0KQxltNnBwzhpkhrpUpEXuUTfr1Ca", clientKey: "kmrT8qwZxJzKLJewJBzVH2MM85nHFCO0AyY5lBIv")
+        Parse.setApplicationId(appID, clientKey: clientKey)
     }
     
     private func checkAccount () {
