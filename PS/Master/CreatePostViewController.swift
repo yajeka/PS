@@ -12,6 +12,8 @@ class CreatePostViewController : UITableViewController {
     
     var extendedSectionCell : Int = -1;
     
+    var tabC: UITabBarController?
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -34,7 +36,7 @@ class CreatePostViewController : UITableViewController {
     
     func doneActivated() {
         
-        self.tabBarController?.selectedIndex = 0
+        tabC?.selectedIndex = 0
         dismissViewControllerAnimated(true, completion: nil)
     }
     

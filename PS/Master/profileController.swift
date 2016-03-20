@@ -24,7 +24,13 @@ class profileController: UIViewController {
         
         let sourceNVC = UIStoryboard(name: "Master", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("CreatePostViewControllerNav")
         
-        presentViewController(sourceNVC, animated: true, completion: nil)
+//        vc?.tabC = tabBarController
+        presentViewController(sourceNVC, animated: true, completion: {
+        let c = sourceNVC as? UINavigationController
+            let b = c?.topViewController as? CreatePostViewController
+            b?.tabC = self.tabBarController
+            
+        })
     }
     
 }
