@@ -45,5 +45,12 @@ class AddPatnerController: UIViewController {
     
     @IBAction func doneButtonPressed(sender: UIBarButtonItem) {
         
+        let storyboard = UIStoryboard(name: "Master", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()
+        vc?.hidesBottomBarWhenPushed = false
+        presentViewController(vc!, animated: true, completion: nil)
+        
+
+        
     }
 }

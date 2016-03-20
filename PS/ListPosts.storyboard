@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cys-ZB-RmC">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--List Posts Table View Controller-->
+        <scene sceneID="YsZ-ge-x7t">
+            <objects>
+                <viewController id="Cys-ZB-RmC" customClass="ListPostsTableViewController" customModule="PS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="art-kl-YgB"/>
+                        <viewControllerLayoutGuide type="bottom" id="J2s-bP-xZw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="86y-ya-Wvq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LK-Bg-kpu">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Post.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Oo-1a-c1U">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="2772"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="3X9-Ea-wx9"/>
+                                            <constraint firstAttribute="height" constant="2772" id="WPz-gy-eze"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7Oo-1a-c1U" firstAttribute="leading" secondItem="4LK-Bg-kpu" secondAttribute="leading" id="TyO-zw-Pwc"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Oo-1a-c1U" secondAttribute="bottom" id="Xb9-uD-7P6"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Oo-1a-c1U" secondAttribute="trailing" id="oh7-Eh-ciC"/>
+                                    <constraint firstItem="7Oo-1a-c1U" firstAttribute="top" secondItem="4LK-Bg-kpu" secondAttribute="top" id="ut4-w0-PmU"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4LK-Bg-kpu" firstAttribute="leading" secondItem="86y-ya-Wvq" secondAttribute="leading" id="3F2-Sf-8mh"/>
+                            <constraint firstAttribute="trailing" secondItem="4LK-Bg-kpu" secondAttribute="trailing" id="KeE-4D-oKx"/>
+                            <constraint firstItem="4LK-Bg-kpu" firstAttribute="top" secondItem="art-kl-YgB" secondAttribute="bottom" id="Wa2-lv-CG6"/>
+                            <constraint firstItem="J2s-bP-xZw" firstAttribute="top" secondItem="4LK-Bg-kpu" secondAttribute="bottom" id="cpW-qn-BAe"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ra-3s-7Ha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275" y="289"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Post.png" width="320" height="2772"/>
+    </resources>
+</document>
