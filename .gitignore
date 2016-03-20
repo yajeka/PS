@@ -3,7 +3,6 @@ build
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 # Exclude CocoaPods pods from
-[Pp]ods/*
 # Xcode
 .DS_Store
 build/
@@ -21,5 +20,4 @@ xcuserdata/*
 *.moved-aside
 DerivedData
 .idea/
-# Pods - for those of you who use CocoaPods
-Pods
+# Pods - for those of you who u
