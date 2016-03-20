@@ -34,6 +34,8 @@ class CreatePostViewController : UITableViewController {
     
     func doneActivated() {
         
+        self.tabBarController?.selectedIndex = 0
+        dismissViewControllerAnimated(true, completion: nil)    
     }
     
     func toggleDone() {
@@ -43,7 +45,7 @@ class CreatePostViewController : UITableViewController {
         }
         else {
             navigationController?.navigationBarHidden = false
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: UIBarButtonItemStyle.Done, target: self, action: Selector(self.doneActivated()))
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: UIBarButtonItemStyle.Done, target: self, action: Selector("doneActivated"))
         }
     }
     

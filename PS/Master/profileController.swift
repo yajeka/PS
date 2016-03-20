@@ -21,7 +21,10 @@ class profileController: UIViewController {
     
     
     @IBAction func createPostButtonPressed(sender: UIButton) {
-        presentViewController(CreatePostViewController(), animated: true, completion: nil)
+        
+        let sourceNVC = UIStoryboard(name: "Master", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("CreatePostViewControllerNav")
+        
+        presentViewController(sourceNVC, animated: true, completion: nil)
     }
     
 }
