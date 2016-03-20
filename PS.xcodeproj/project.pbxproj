@@ -10,8 +10,11 @@
 		708E5CDA1C9C838E006435CF /* PSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708E5CD91C9C838E006435CF /* PSTests.swift */; };
 		70F6ABAF1C9E92B100646FAA /* BackendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6ABAE1C9E92B100646FAA /* BackendManager.swift */; };
 		70F6ABB01C9E92B100646FAA /* BackendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6ABAE1C9E92B100646FAA /* BackendManager.swift */; };
+		F7215E2B1C9D5ECF007B0D07 /* InitialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E2A1C9D5ECF007B0D07 /* InitialController.swift */; };
+		F7215E2F1C9D630D007B0D07 /* CreateCredentialsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E2E1C9D630D007B0D07 /* CreateCredentialsController.swift */; };
+		F7215E421C9DA73F007B0D07 /* MyProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E411C9DA73F007B0D07 /* MyProfileController.swift */; };
+		F7215E441C9DB89A007B0D07 /* AddPatnerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E431C9DB89A007B0D07 /* AddPatnerController.swift */; };
 		F72AA3991C9C1D6700C4B25F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72AA3981C9C1D6700C4B25F /* AppDelegate.swift */; };
-		F72AA39B1C9C1D6700C4B25F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72AA39A1C9C1D6700C4B25F /* ViewController.swift */; };
 		F72AA39E1C9C1D6700C4B25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72AA39C1C9C1D6700C4B25F /* Main.storyboard */; };
 		F72AA3A01C9C1D6700C4B25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72AA39F1C9C1D6700C4B25F /* Assets.xcassets */; };
 		F72AA3A31C9C1D6700C4B25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72AA3A11C9C1D6700C4B25F /* LaunchScreen.storyboard */; };
@@ -36,9 +39,12 @@
 		708E5CDB1C9C838E006435CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70F6ABAE1C9E92B100646FAA /* BackendManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendManager.swift; sourceTree = "<group>"; };
 		ECB83E753367D31006F97B12 /* Pods_PS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7215E2A1C9D5ECF007B0D07 /* InitialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialController.swift; sourceTree = "<group>"; };
+		F7215E2E1C9D630D007B0D07 /* CreateCredentialsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCredentialsController.swift; sourceTree = "<group>"; };
+		F7215E411C9DA73F007B0D07 /* MyProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileController.swift; sourceTree = "<group>"; };
+		F7215E431C9DB89A007B0D07 /* AddPatnerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatnerController.swift; sourceTree = "<group>"; };
 		F72AA3951C9C1D6700C4B25F /* PS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72AA3981C9C1D6700C4B25F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F72AA39A1C9C1D6700C4B25F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F72AA39D1C9C1D6700C4B25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F72AA39F1C9C1D6700C4B25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F72AA3A21C9C1D6700C4B25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,6 +87,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F7215E271C9D5E1B007B0D07 /* start */ = {
+			isa = PBXGroup;
+			children = (
+				F7215E2A1C9D5ECF007B0D07 /* InitialController.swift */,
+				F7215E2E1C9D630D007B0D07 /* CreateCredentialsController.swift */,
+				F7215E411C9DA73F007B0D07 /* MyProfileController.swift */,
+				F7215E431C9DB89A007B0D07 /* AddPatnerController.swift */,
+			);
+			name = start;
+			sourceTree = "<group>";
+		};
+		F7215E301C9D6F05007B0D07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F72AA39F1C9C1D6700C4B25F /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		F72AA38C1C9C1D6600C4B25F = {
 			isa = PBXGroup;
 			children = (
@@ -104,10 +129,10 @@
 		F72AA3971C9C1D6700C4B25F /* PS */ = {
 			isa = PBXGroup;
 			children = (
+				F7215E301C9D6F05007B0D07 /* Resources */,
+				F7215E271C9D5E1B007B0D07 /* start */,
 				F72AA3981C9C1D6700C4B25F /* AppDelegate.swift */,
-				F72AA39A1C9C1D6700C4B25F /* ViewController.swift */,
 				F72AA39C1C9C1D6700C4B25F /* Main.storyboard */,
-				F72AA39F1C9C1D6700C4B25F /* Assets.xcassets */,
 				F72AA3A11C9C1D6700C4B25F /* LaunchScreen.storyboard */,
 				F72AA3A41C9C1D6700C4B25F /* Info.plist */,
 				70F6ABAE1C9E92B100646FAA /* BackendManager.swift */,
@@ -287,7 +312,11 @@
 			files = (
 				70F6ABAF1C9E92B100646FAA /* BackendManager.swift in Sources */,
 				F72AA39B1C9C1D6700C4B25F /* ViewController.swift in Sources */,
+				F7215E2B1C9D5ECF007B0D07 /* InitialController.swift in Sources */,
+				F7215E441C9DB89A007B0D07 /* AddPatnerController.swift in Sources */,
+				F7215E2F1C9D630D007B0D07 /* CreateCredentialsController.swift in Sources */,
 				F72AA3991C9C1D6700C4B25F /* AppDelegate.swift in Sources */,
+				F7215E421C9DA73F007B0D07 /* MyProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
