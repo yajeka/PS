@@ -176,7 +176,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOs-ks-9KN">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOs-ks-9KN">
                                 <rect key="frame" x="120" y="79" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="XUp-gY-I92"/>
@@ -194,25 +194,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZzL-js-2zU">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZzL-js-2zU">
                                 <rect key="frame" x="51" y="211" width="218" height="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date of birth" placeholder="Date of birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z4o-HT-EES">
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date of birth" placeholder="Date of birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z4o-HT-EES">
                                 <rect key="frame" x="51" y="248" width="218" height="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Gender" placeholder="Gender" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JT3-Nr-5MG">
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Gender" placeholder="Gender" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JT3-Nr-5MG">
                                 <rect key="frame" x="51" y="285" width="218" height="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sexual orientation" placeholder="Sexual orientation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xwi-vZ-Bpr">
+                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sexual orientation" placeholder="Sexual orientation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xwi-vZ-Bpr">
                                 <rect key="frame" x="51" y="322" width="218" height="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -299,6 +299,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="addPhotoButton" destination="cOs-ks-9KN" id="reg-ni-G2R"/>
                         <outlet property="birthDateTextField" destination="Z4o-HT-EES" id="DXy-Tr-qEp"/>
                         <outlet property="genderTextField" destination="JT3-Nr-5MG" id="Wmt-AI-V0k"/>
                         <outlet property="lastNameTextField" destination="ZzL-js-2zU" id="bC9-xP-JKn"/>
@@ -367,9 +368,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7xe-9H-Mcp">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="vaO-7d-k01"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" systemItem="done" id="vaO-7d-k01">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="ff9-RX-emb" id="4CI-lL-msy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="addPhotoButton" destination="5Qz-pm-oTU" id="vQc-f2-bFT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6i-Sn-4Uj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,7 +385,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Ps.png" width="133" height="133"/>
+        <image name="Ps.png" width="22" height="22"/>
         <image name="button_login" width="280" height="75"/>
         <image name="photo" width="58" height="58"/>
         <image name="search_partner" width="16" height="16"/>

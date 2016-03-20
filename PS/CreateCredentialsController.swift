@@ -8,21 +8,25 @@
 
 import UIKit
 
-class CreateCredentialsController: UIViewController, UITextFieldDelegate {
+class CreateCredentialsController: UIViewController, UITextFieldDelegate, RegisterView {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     let kToMyProfileSeg = "toMyProfileSeg"
+    
+    private lazy var registerViewModel:RegisterViewModel = {
+        return RegisterViewModel.init(view: self)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Creat new account"
         emailTextField.becomeFirstResponder()
         emailTextField.delegate = self
-        emailTextField.text = ""
+        emailTextField.text = "yury.brankovsky@gmail.com"
         passwordTextField.delegate = self
-        passwordTextField.text = ""
+        passwordTextField.text = "kjhvb,jhvblhlgg"
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 
@@ -31,6 +35,7 @@ class CreateCredentialsController: UIViewController, UITextFieldDelegate {
     
     @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
         performSegueWithIdentifier(kToMyProfileSeg, sender: sender)
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -42,7 +47,8 @@ class CreateCredentialsController: UIViewController, UITextFieldDelegate {
         } else if textField === passwordTextField {
             if passwordTextField.text?.characters.count > -1 {
                 //service calse and //        performSegueWithIdentifier(<#T##identifier: String##String#>, sender: <#T##AnyObject?#>)
-                performSegueWithIdentifier(kToMyProfileSeg, sender: textField)
+//                performSegueWithIdentifier(kToMyProfileSeg, sender: textField)
+                self.registerViewModel.register(self.emailTextField.text!, password: self.passwordTextField.text!)
             }
         }
         return false

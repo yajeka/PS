@@ -15,7 +15,7 @@ protocol MainView {
     func openRegisterUserScreen()
 }
 
-class MainViewModel: NSObject {
+class MainViewModel: AnyObject {
     
     let view: MainView
     let appID = "lARUxNeUrMj0KQxltNnBwzhpkhrpUpEXuUTfr1Ca"
@@ -39,9 +39,13 @@ class MainViewModel: NSObject {
         let uuid = NSUUID().UUIDString
 
         self.view.startInitial()
-        
-        BackendManager.findByUid(uuid) { (result: AnyObject?, error: NSError?) -> Void in
-            self.view.openRegisterUserScreen()
+
+        BackendManager.findByUid(uuid) { (success: PFObject?, error: String?) -> Void in
+            if error != nil {
+                self.view.openRegisterUserScreen()
+            } else if success != nil {
+                self.view.openLoginScreen()
+            }
         }
     }
     

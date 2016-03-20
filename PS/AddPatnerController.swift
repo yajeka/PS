@@ -10,6 +10,7 @@ import UIKit
 
 class AddPatnerController: UIViewController {
     
+    @IBOutlet weak var addPhotoButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,7 @@ class AddPatnerController: UIViewController {
         title = "App partner"
 
         view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+        addPhotoButtonConfig()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,15 +26,24 @@ class AddPatnerController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func addPhotoButtonConfig() {
+        //        if let image = addPhotoButton.imageView?.image {
+        addPhotoButton.layer.cornerRadius = 40
+        addPhotoButton.layer.masksToBounds = true
+        addPhotoButton.layer.borderWidth = 3
+        addPhotoButton.layer.borderColor = UIColor.whiteColor().CGColor
+        addPhotoButtonChangeImage(UIImage(named: "girl")!)
+        
+        //        }
     }
-    */
-
+    
+    func addPhotoButtonChangeImage(newImage:UIImage) {
+        addPhotoButton.setImage(newImage, forState: .Normal)
+        addPhotoButton.setBackgroundImage(newImage, forState: .Normal)
+    }
+    
+    
+    @IBAction func doneButtonPressed(sender: UIBarButtonItem) {
+        
+    }
 }
