@@ -12,42 +12,41 @@ import Parse
 public typealias BackedBlock = (success: PFObject?, error: String?) -> Void
 
 public class BackendManager {
+    
+    private class func handleResult(result: AnyObject? , error: NSError?, block: BackedBlock?, className: String) {
+        if result is String {
+            block!(success: nil, error: result as? String)
+        } else if  let input = result as? NSDictionary {
+            let query = PFQuery(className: className);
+            do {
+                let objectId = input["objectId"] as! String
+                
+                let task = query.getObjectInBackgroundWithId(objectId)
+                
+                task.waitUntilFinished()
+                
+                let object:PFObject = task.result as! PFObject
+                
+                block!(success: object, error: nil)
+            } catch {
+                block!(success: nil, error: "error")
+            }
+        }
+    }
+    
     public class func signUp(uid: String, email: String, password: String,  block: BackedBlock?) {
     }
     
     public class func findByEmailAndPassword(email: String, password: String,  block: BackedBlock?) {
         PFCloud.callFunctionInBackground("findByEmailAndPassword", withParameters: ["email": email, "password": password], block: {(result: AnyObject? , error: NSError?) -> Void in
-                if result is String {
-                        block!(success: nil, error: result as? String)
-                } else if  let input = result as? NSDictionary {
-                    let object:PFObject = PFObject(className: "Account")
-                    object["objectId"] = input["objectId"]
-                    let task = object.fetchInBackground()
-                    task.waitUntilFinished()
-                    block!(success: object, error: nil)
-                }
+                handleResult(result,error: error, block: block, className: "Account")
             });
     }
 
     
-    
-//    is Dictionary {
-//    let object:PFObject = PFObject("Account");
-//    object.
-    
-
-    
     public class func findByUid(uid: String, block: BackedBlock?) {
         PFCloud.callFunctionInBackground("findByUid", withParameters: ["uid": uid], block: {(result: AnyObject? , error: NSError?) -> Void in
-            if result is String {
-                block!(success: nil, error: result as? String)
-            } else if  let input = result as? NSDictionary {
-                let object:PFObject = PFObject(className: "Account")
-                object["objectId"] = input["objectId"]
-                let task = object.fetchInBackground()
-                task.waitUntilFinished()
-                block!(success: object, error: nil)
-            }
+            handleResult(result,error: error, block: block, className: "Account")
         });
     }
     
