@@ -31,6 +31,7 @@ class CreateCredentialsController: UIViewController, UITextFieldDelegate {
     
     @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
         performSegueWithIdentifier(kToMyProfileSeg, sender: sender)
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
