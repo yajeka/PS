@@ -34,7 +34,7 @@ class CreatePostViewController : UITableViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: false);
         
         if(extendedSectionCell == indexPath.section) {
-            extendedSectionCell = -1
+//            extendedSectionCell = -1
         }
         else {
             extendedSectionCell = indexPath.section
@@ -48,14 +48,14 @@ class CreatePostViewController : UITableViewController {
 //    }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        var result : CGFloat = 100;
+        var result : CGFloat = 120;
         
         if indexPath.section == extendedSectionCell {
             switch indexPath.row {
             case 0:
                 break;
             case 1:
-                result = 120.0;
+                result = 140.0;
                 break;
             case 2:
                 result = 50.0;

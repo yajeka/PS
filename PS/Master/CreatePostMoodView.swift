@@ -9,8 +9,9 @@
 import UIKit
 
 class CreatePostMoodView : UITableViewCell {
-    
-    var lastSelected : Int = -1;
+
+    @IBOutlet
+    var outletsList : [UIImageView]!;
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,8 +20,13 @@ class CreatePostMoodView : UITableViewCell {
     @IBAction
     func didSelectImageView(sender: UIGestureRecognizer?) {
         
-        if let sourceTag = sender?.view?.tag {
-            
+        for view in outletsList {
+//            if view == sender?.view {
+//                view.superview?.contentScaleFactor = 1.2;
+//            }
+//            else {
+//                view.superview?.contentScaleFactor = 1.0;
+//            }
         }
     }
 }
