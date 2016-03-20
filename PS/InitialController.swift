@@ -31,7 +31,7 @@ class InitialController: UIViewController {
         createAcountButton.setBackgroundImage(UIImage(named: "button_login_pressed")!, forState: .Highlighted)
         signInButton.setBackgroundImage(UIImage(named: "button_login_pressed")!, forState: .Highlighted)
         
-        
+        self.initialViewModel.runMainModel()
     }
     
     @IBAction func createAccountButtonPressed(sender: UIButton) {
