@@ -9,6 +9,7 @@
 import XCTest
 import Parse
 
+
 class PSTests: XCTestCase {
     
     override func setUp() {
@@ -24,13 +25,26 @@ class PSTests: XCTestCase {
     func testRegisterNewDevice() {
         Parse.setApplicationId("lARUxNeUrMj0KQxltNnBwzhpkhrpUpEXuUTfr1Ca", clientKey: "kmrT8qwZxJzKLJewJBzVH2MM85nHFCO0AyY5lBIv");
         
-        var task = PFCloud.callFunctionInBackground("findByUid", withParameters: ["uid":"uid1"]);
-        task.waitUntilFinished()
-        print(task)
+        let asyncExpectation = expectationWithDescription("longRunningFunction")
         
-        task = PFCloud.callFunctionInBackground("findByEmailAndPassword", withParameters: ["email":"account2@account2" , "password":"account2"]);
-        task.waitUntilFinished()
-        print(task)
+        BackendManager.findByUid("uid1", block: {(result: AnyObject? , error: NSError?) -> Void in
+            print (result)
+            asyncExpectation.fulfill()
+        })
+        
+        self.waitForExpectationsWithTimeout(5) { error in
+            print(error)
+        }
+        
+        
+        
+//        var task = PFCloud.callFunctionInBackground("findByUid", withParameters: ["uid":"uid1"]);
+//        task.waitUntilFinished()
+//        print(task)
+//        
+//        task = PFCloud.callFunctionInBackground("findByEmailAndPassword", withParameters: ["email":"account2@account2" , "password":"account2"]);
+//        task.waitUntilFinished()
+//        print(task)
         
     }
     
@@ -74,10 +88,10 @@ class PSTests: XCTestCase {
             print("error")
         }
         
-//        gameScore.saveInBackgroundWithBlock({ (result: Bool , error: NSError? ) -> Void in
-//            print(result;
-//        })
-
+        //        gameScore.saveInBackgroundWithBlock({ (result: Bool , error: NSError? ) -> Void in
+        //            print(result;
+        //        })
+        
         
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
