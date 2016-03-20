@@ -18,6 +18,9 @@
 		A8AE0A131C9EA2CF003C7207 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */; };
 		A8AE0A141C9EA2CF003C7207 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */; };
 		A8B1A5061C9EC39B009B684A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1A5051C9EC39B009B684A /* RegisterViewModel.swift */; };
+		A8B1A5081C9ECBD9009B684A /* ListPosts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8B1A5071C9ECBD9009B684A /* ListPosts.storyboard */; };
+		A8B1A50A1C9ECC08009B684A /* ListPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1A5091C9ECC08009B684A /* ListPostsTableViewController.swift */; };
+		A8B1A50C1C9EE6E2009B684A /* Post@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B1A50B1C9EE6E2009B684A /* Post@2x.png */; };
 		F7215E2B1C9D5ECF007B0D07 /* InitialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E2A1C9D5ECF007B0D07 /* InitialController.swift */; };
 		F7215E2F1C9D630D007B0D07 /* CreateCredentialsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E2E1C9D630D007B0D07 /* CreateCredentialsController.swift */; };
 		F7215E421C9DA73F007B0D07 /* MyProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E411C9DA73F007B0D07 /* MyProfileController.swift */; };
@@ -54,6 +57,9 @@
 		8DFBB1721C9EBF4D006E4D1A /* CreatePostScriptumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostScriptumView.swift; sourceTree = "<group>"; };
 		A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A8B1A5051C9EC39B009B684A /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		A8B1A5071C9ECBD9009B684A /* ListPosts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListPosts.storyboard; sourceTree = "<group>"; };
+		A8B1A5091C9ECC08009B684A /* ListPostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPostsTableViewController.swift; sourceTree = "<group>"; };
+		A8B1A50B1C9EE6E2009B684A /* Post@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Post@2x.png"; path = "../../../../Downloads/Post@2x.png"; sourceTree = "<group>"; };
 		ECB83E753367D31006F97B12 /* Pods_PS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7215E2A1C9D5ECF007B0D07 /* InitialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialController.swift; sourceTree = "<group>"; };
 		F7215E2E1C9D630D007B0D07 /* CreateCredentialsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCredentialsController.swift; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 		F7215E301C9D6F05007B0D07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A8B1A50B1C9EE6E2009B684A /* Post@2x.png */,
 				F72AA39F1C9C1D6700C4B25F /* Assets.xcassets */,
 				F78CB97E1C9EAA9A00C03ECF /* UIViewController+UIAlert.swift */,
 			);
@@ -169,6 +176,8 @@
 				70F6ABAE1C9E92B100646FAA /* BackendManager.swift */,
 				A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */,
 				A8B1A5051C9EC39B009B684A /* RegisterViewModel.swift */,
+				A8B1A5071C9ECBD9009B684A /* ListPosts.storyboard */,
+				A8B1A5091C9ECC08009B684A /* ListPostsTableViewController.swift */,
 			);
 			path = PS;
 			sourceTree = "<group>";
@@ -273,7 +282,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B1A50C1C9EE6E2009B684A /* Post@2x.png in Resources */,
 				8D8CBD9D1C9EA28900E84508 /* Master.storyboard in Resources */,
+				A8B1A5081C9ECBD9009B684A /* ListPosts.storyboard in Resources */,
 				F72AA3A31C9C1D6700C4B25F /* LaunchScreen.storyboard in Resources */,
 				F72AA3A01C9C1D6700C4B25F /* Assets.xcassets in Resources */,
 				F72AA39E1C9C1D6700C4B25F /* Main.storyboard in Resources */,
@@ -358,6 +369,7 @@
 				F78CB97F1C9EAA9A00C03ECF /* UIViewController+UIAlert.swift in Sources */,
 				A8B1A5061C9EC39B009B684A /* RegisterViewModel.swift in Sources */,
 				F7215E421C9DA73F007B0D07 /* MyProfileController.swift in Sources */,
+				A8B1A50A1C9ECC08009B684A /* ListPostsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
