@@ -40,9 +40,9 @@ class MainViewModel: NSObject {
 
         self.view.startInitial()
         
-        BackendManager.findByUid(uuid) { (result: AnyObject?, error: NSError?) -> Void in
-            self.view.openRegisterUserScreen()
-        }
+//        BackendManager.findByUid(uuid) { (result: AnyObject?, error: NSError?) -> Void in
+//            self.view.openRegisterUserScreen()
+//        }
     }
     
 }

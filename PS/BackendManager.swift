@@ -37,8 +37,18 @@ public class BackendManager {
     
 
     
-    public class func findByUid(uid: String, block: PFIdResultBlock?) {
-        PFCloud.callFunctionInBackground("findByUid", withParameters: ["uid": uid], block: block);
+    public class func findByUid(uid: String, block: BackedBlock?) {
+        PFCloud.callFunctionInBackground("findByUid", withParameters: ["uid": uid], block: {(result: AnyObject? , error: NSError?) -> Void in
+            if result is String {
+                block!(success: nil, error: result as? String)
+            } else if  let input = result as? NSDictionary {
+                let object:PFObject = PFObject(className: "Account")
+                object["objectId"] = input["objectId"]
+                let task = object.fetchInBackground()
+                task.waitUntilFinished()
+                block!(success: object, error: nil)
+            }
+        });
     }
     
     public class func findByEmailAndPassword(email: String, password: String) -> BFTask {
