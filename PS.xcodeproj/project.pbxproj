@@ -20,6 +20,7 @@
 		F72AA39E1C9C1D6700C4B25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72AA39C1C9C1D6700C4B25F /* Main.storyboard */; };
 		F72AA3A01C9C1D6700C4B25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72AA39F1C9C1D6700C4B25F /* Assets.xcassets */; };
 		F72AA3A31C9C1D6700C4B25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72AA3A11C9C1D6700C4B25F /* LaunchScreen.storyboard */; };
+		F78CB97F1C9EAA9A00C03ECF /* UIViewController+UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78CB97E1C9EAA9A00C03ECF /* UIViewController+UIAlert.swift */; };
 		FCFE7C73092F26B1AA0BF2B0 /* Pods_PS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB83E753367D31006F97B12 /* Pods_PS.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		F72AA39F1C9C1D6700C4B25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F72AA3A21C9C1D6700C4B25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F72AA3A41C9C1D6700C4B25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F78CB97E1C9EAA9A00C03ECF /* UIViewController+UIAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				F72AA39F1C9C1D6700C4B25F /* Assets.xcassets */,
+				F78CB97E1C9EAA9A00C03ECF /* UIViewController+UIAlert.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				F7215E441C9DB89A007B0D07 /* AddPatnerController.swift in Sources */,
 				F7215E2F1C9D630D007B0D07 /* CreateCredentialsController.swift in Sources */,
 				F72AA3991C9C1D6700C4B25F /* AppDelegate.swift in Sources */,
+				F78CB97F1C9EAA9A00C03ECF /* UIViewController+UIAlert.swift in Sources */,
 				F7215E421C9DA73F007B0D07 /* MyProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
