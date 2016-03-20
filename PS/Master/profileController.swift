@@ -21,6 +21,7 @@ class profileController: UIViewController {
     
     
     @IBAction func createPostButtonPressed(sender: UIButton) {
+        presentViewController(CreatePostViewController(), animated: true, completion: nil)
     }
     
 }
