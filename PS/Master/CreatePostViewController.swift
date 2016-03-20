@@ -15,37 +15,53 @@ class CreatePostViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        let backgroundView = UIView(frame: view.bounds);
-        backgroundView.backgroundColor = UIColor.yellowColor()
-        view.insertSubview(backgroundView, atIndex: 0)
-
+        let backgroundView = UIImageView(frame: view.bounds)
+        backgroundView.image = UIImage(named: "background")
+        tableView.backgroundView = backgroundView
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.translucent = true
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        toggleDone()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
     }
     
-//    func didChooseOptionInCell(tableCell: UITableViewCell) {
-//        
-//    }
+    
+    func doneActivated() {
+        
+    }
+    
+    func toggleDone() {
+        
+        if extendedSectionCell == -1 {
+            navigationItem.rightBarButtonItem = nil;
+        }
+        else {
+            navigationController?.navigationBarHidden = false
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: UIBarButtonItemStyle.Done, target: self, action: Selector(self.doneActivated()))
+        }
+    }
+    
     
 //MARK: TableView
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false);
         
         if(extendedSectionCell == indexPath.section) {
-//            extendedSectionCell = -1
+
         }
         else {
             extendedSectionCell = indexPath.section
         }
         
+        toggleDone()
         tableView.reloadData()
     }
-    
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 3;
-//    }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         var result : CGFloat = 120;
