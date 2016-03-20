@@ -8,14 +8,17 @@
 
 import UIKit
 
-class InitialController: UIViewController {
+class InitialController: UIViewController, MainView {
     
     @IBOutlet weak var pSImage: UIImageView!
     @IBOutlet weak var createAcountButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
     
     let kToCreateCredentionsSeg = "toCreateCredentionsSeg"
-    let initialViewModel:MainViewModel = MainViewModel()
+    
+    private lazy var initialViewModel:MainViewModel = {
+        return MainViewModel.init(view: self)
+    }()
     
     
     override func viewDidLoad() {
@@ -49,5 +52,17 @@ class InitialController: UIViewController {
         
     }
     
+    // MARK: - MainView implementation
     
+    func startInitial() {
+        // TODO: implement progress view for find and login user
+    }
+    
+    func openLoginScreen() {
+        // TODO: implement login screen
+    }
+    
+    func openRegisterUserScreen() {
+        // TODO: implement open screen to register user
+    }
 }
