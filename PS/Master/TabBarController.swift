@@ -10,6 +10,7 @@ import UIKit
 
 class TabBarController: UITabBarController {
 
+    var count = 1
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,10 +18,20 @@ class TabBarController: UITabBarController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        tabBarController?.selectedIndex = 3
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        if count == 0 {
+            self.selectedIndex = 0
+        } else {
+        count = 0
+            selectedIndex = 3
+        }
+
     }
+    
+//    override func viewDidAppear(animated: Bool) {
+//        super.viewDidAppear(animated)    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

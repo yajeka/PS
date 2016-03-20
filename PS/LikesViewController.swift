@@ -14,8 +14,12 @@ class LikesViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.translucent = true
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        title = "Likes"
     }
     
     override func viewDidDisappear(animated: Bool) {

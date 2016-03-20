@@ -48,7 +48,9 @@ class AddPatnerController: UIViewController {
         let storyboard = UIStoryboard(name: "Master", bundle: nil)
         let vc = storyboard.instantiateInitialViewController()
         vc?.hidesBottomBarWhenPushed = false
-        presentViewController(vc!, animated: true, completion: nil)
+        presentViewController(vc!, animated: true, completion: {
+        })
+        
         
 
         
