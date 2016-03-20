@@ -10,6 +10,8 @@
 		708E5CDA1C9C838E006435CF /* PSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708E5CD91C9C838E006435CF /* PSTests.swift */; };
 		70F6ABAF1C9E92B100646FAA /* BackendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6ABAE1C9E92B100646FAA /* BackendManager.swift */; };
 		70F6ABB01C9E92B100646FAA /* BackendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6ABAE1C9E92B100646FAA /* BackendManager.swift */; };
+		A8AE0A131C9EA2CF003C7207 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */; };
+		A8AE0A141C9EA2CF003C7207 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */; };
 		F7215E2B1C9D5ECF007B0D07 /* InitialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E2A1C9D5ECF007B0D07 /* InitialController.swift */; };
 		F7215E2F1C9D630D007B0D07 /* CreateCredentialsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E2E1C9D630D007B0D07 /* CreateCredentialsController.swift */; };
 		F7215E421C9DA73F007B0D07 /* MyProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E411C9DA73F007B0D07 /* MyProfileController.swift */; };
@@ -38,6 +40,7 @@
 		708E5CD91C9C838E006435CF /* PSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSTests.swift; sourceTree = "<group>"; };
 		708E5CDB1C9C838E006435CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70F6ABAE1C9E92B100646FAA /* BackendManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendManager.swift; sourceTree = "<group>"; };
+		A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		ECB83E753367D31006F97B12 /* Pods_PS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7215E2A1C9D5ECF007B0D07 /* InitialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialController.swift; sourceTree = "<group>"; };
 		F7215E2E1C9D630D007B0D07 /* CreateCredentialsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCredentialsController.swift; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 				F72AA3A11C9C1D6700C4B25F /* LaunchScreen.storyboard */,
 				F72AA3A41C9C1D6700C4B25F /* Info.plist */,
 				70F6ABAE1C9E92B100646FAA /* BackendManager.swift */,
+				A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */,
 			);
 			path = PS;
 			sourceTree = "<group>";
@@ -303,6 +307,7 @@
 			files = (
 				70F6ABB01C9E92B100646FAA /* BackendManager.swift in Sources */,
 				708E5CDA1C9C838E006435CF /* PSTests.swift in Sources */,
+				A8AE0A141C9EA2CF003C7207 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,8 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8AE0A131C9EA2CF003C7207 /* MainViewModel.swift in Sources */,
 				70F6ABAF1C9E92B100646FAA /* BackendManager.swift in Sources */,
-				F72AA39B1C9C1D6700C4B25F /* ViewController.swift in Sources */,
 				F7215E2B1C9D5ECF007B0D07 /* InitialController.swift in Sources */,
 				F7215E441C9DB89A007B0D07 /* AddPatnerController.swift in Sources */,
 				F7215E2F1C9D630D007B0D07 /* CreateCredentialsController.swift in Sources */,
