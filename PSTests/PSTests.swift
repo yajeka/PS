@@ -27,8 +27,8 @@ class PSTests: XCTestCase {
         
         let asyncExpectation = expectationWithDescription("longRunningFunction")
         
-        BackendManager.findByUid("uid1", block: {(result: AnyObject? , error: NSError?) -> Void in
-            print (result)
+        BackendManager.findByEmailAndPassword("account2@account2", password: "account2", block: {(success: PFObject?, error: String?) -> Void in
+            print (success)
             asyncExpectation.fulfill()
         })
         
