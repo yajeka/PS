@@ -16,6 +16,8 @@ public class BackendManager {
     private class func handleResult(result: AnyObject? , error: NSError?, block: BackedBlock?, className: String) {
         if result is String {
             block!(success: nil, error: result as? String)
+        } else if error != nil {
+            block!(success: nil, error: error?.localizedDescription)
         } else if  let input = result as? NSDictionary {
             let query = PFQuery(className: className);
             let objectId = input["objectId"] as! String

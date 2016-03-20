@@ -22,6 +22,21 @@ class PSTests: XCTestCase {
         super.tearDown()
     }
     
+    
+    func testCreateAccount() {
+        Parse.setApplicationId("lARUxNeUrMj0KQxltNnBwzhpkhrpUpEXuUTfr1Ca", clientKey: "kmrT8qwZxJzKLJewJBzVH2MM85nHFCO0AyY5lBIv");
+        let asyncExpectation = expectationWithDescription("longRunningFunction")
+        
+        BackendManager.signUp("uid11", email: "account11@account11", password: "account11", block: {(success: PFObject?, error: String?) -> Void in
+            print (success)
+            asyncExpectation.fulfill()
+            })
+        self.waitForExpectationsWithTimeout(50) { error in
+            print(error)
+        }
+
+    }
+    
     func testRegisterNewDevice() {
         Parse.setApplicationId("lARUxNeUrMj0KQxltNnBwzhpkhrpUpEXuUTfr1Ca", clientKey: "kmrT8qwZxJzKLJewJBzVH2MM85nHFCO0AyY5lBIv");
         
