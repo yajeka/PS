@@ -9,6 +9,7 @@
 import XCTest
 import Parse
 
+
 class PSTests: XCTestCase {
     
     override func setUp() {
@@ -19,6 +20,49 @@ class PSTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testRegisterNewDevice() {
+        Parse.setApplicationId("lARUxNeUrMj0KQxltNnBwzhpkhrpUpEXuUTfr1Ca", clientKey: "kmrT8qwZxJzKLJewJBzVH2MM85nHFCO0AyY5lBIv");
+        
+        let asyncExpectation = expectationWithDescription("longRunningFunction")
+        
+        BackendManager.findByUid("uid1", block: {(result: AnyObject? , error: NSError?) -> Void in
+            print (result)
+            asyncExpectation.fulfill()
+        })
+        
+        self.waitForExpectationsWithTimeout(5) { error in
+            print(error)
+        }
+        
+        
+        
+//        var task = PFCloud.callFunctionInBackground("findByUid", withParameters: ["uid":"uid1"]);
+//        task.waitUntilFinished()
+//        print(task)
+//        
+//        task = PFCloud.callFunctionInBackground("findByEmailAndPassword", withParameters: ["email":"account2@account2" , "password":"account2"]);
+//        task.waitUntilFinished()
+//        print(task)
+        
+    }
+    
+    func createAccounts() {
+        var accounts:[PFObject] = []
+        for (var i=1; i<11; i++) {
+            let account = PFObject(className: "Account")
+            account["uids"] = ["uid\(i)"]
+            account["email"] = "account\(i)@account\(i)"
+            account["password"] = "account\(i)"
+            accounts += [account]
+        }
+        do {
+            try PFObject.saveAll(accounts)
+        }
+        catch {
+            print("error")
+        }
     }
     
     func testExample() {
@@ -44,10 +88,10 @@ class PSTests: XCTestCase {
             print("error")
         }
         
-//        gameScore.saveInBackgroundWithBlock({ (result: Bool , error: NSError? ) -> Void in
-//            print(result;
-//        })
-
+        //        gameScore.saveInBackgroundWithBlock({ (result: Bool , error: NSError? ) -> Void in
+        //            print(result;
+        //        })
+        
         
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
