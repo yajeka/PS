@@ -8,12 +8,16 @@
 
 import UIKit
 
-class CreateCredentialsController: UIViewController, UITextFieldDelegate {
+class CreateCredentialsController: UIViewController, UITextFieldDelegate, RegisterView {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     let kToMyProfileSeg = "toMyProfileSeg"
+    
+    private lazy var initialViewModel:RegisterViewModel = {
+        return RegisterViewModel.init(view: self)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()

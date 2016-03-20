@@ -64,5 +64,7 @@ class InitialController: UIViewController, MainView {
     
     func openRegisterUserScreen() {
         // TODO: implement open screen to register user
+        
+        performSegueWithIdentifier(kToCreateCredentionsSeg, sender: nil)
     }
 }
