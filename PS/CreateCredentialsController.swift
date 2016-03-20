@@ -24,9 +24,9 @@ class CreateCredentialsController: UIViewController, UITextFieldDelegate, Regist
         title = "Creat new account"
         emailTextField.becomeFirstResponder()
         emailTextField.delegate = self
-        emailTextField.text = ""
+        emailTextField.text = "yury.brankovsky@gmail.com"
         passwordTextField.delegate = self
-        passwordTextField.text = ""
+        passwordTextField.text = "kjhvb,jhvblhlgg"
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 

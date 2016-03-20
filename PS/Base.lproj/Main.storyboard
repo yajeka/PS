@@ -176,7 +176,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOs-ks-9KN">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOs-ks-9KN">
                                 <rect key="frame" x="120" y="79" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="XUp-gY-I92"/>
@@ -368,9 +368,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7xe-9H-Mcp">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="vaO-7d-k01"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" systemItem="done" id="vaO-7d-k01">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="ff9-RX-emb" id="4CI-lL-msy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="addPhotoButton" destination="5Qz-pm-oTU" id="vQc-f2-bFT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6i-Sn-4Uj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
