@@ -12,6 +12,7 @@
 		70F6ABB01C9E92B100646FAA /* BackendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6ABAE1C9E92B100646FAA /* BackendManager.swift */; };
 		A8AE0A131C9EA2CF003C7207 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */; };
 		A8AE0A141C9EA2CF003C7207 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */; };
+		A8B1A5061C9EC39B009B684A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1A5051C9EC39B009B684A /* RegisterViewModel.swift */; };
 		F7215E2B1C9D5ECF007B0D07 /* InitialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E2A1C9D5ECF007B0D07 /* InitialController.swift */; };
 		F7215E2F1C9D630D007B0D07 /* CreateCredentialsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E2E1C9D630D007B0D07 /* CreateCredentialsController.swift */; };
 		F7215E421C9DA73F007B0D07 /* MyProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E411C9DA73F007B0D07 /* MyProfileController.swift */; };
@@ -42,6 +43,7 @@
 		708E5CDB1C9C838E006435CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70F6ABAE1C9E92B100646FAA /* BackendManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendManager.swift; sourceTree = "<group>"; };
 		A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		A8B1A5051C9EC39B009B684A /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		ECB83E753367D31006F97B12 /* Pods_PS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7215E2A1C9D5ECF007B0D07 /* InitialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialController.swift; sourceTree = "<group>"; };
 		F7215E2E1C9D630D007B0D07 /* CreateCredentialsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCredentialsController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				F72AA3A41C9C1D6700C4B25F /* Info.plist */,
 				70F6ABAE1C9E92B100646FAA /* BackendManager.swift */,
 				A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */,
+				A8B1A5051C9EC39B009B684A /* RegisterViewModel.swift */,
 			);
 			path = PS;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				F7215E2F1C9D630D007B0D07 /* CreateCredentialsController.swift in Sources */,
 				F72AA3991C9C1D6700C4B25F /* AppDelegate.swift in Sources */,
 				F78CB97F1C9EAA9A00C03ECF /* UIViewController+UIAlert.swift in Sources */,
+				A8B1A5061C9EC39B009B684A /* RegisterViewModel.swift in Sources */,
 				F7215E421C9DA73F007B0D07 /* MyProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
