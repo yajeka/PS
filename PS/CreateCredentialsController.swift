@@ -8,12 +8,16 @@
 
 import UIKit
 
-class CreateCredentialsController: UIViewController, UITextFieldDelegate {
+class CreateCredentialsController: UIViewController, UITextFieldDelegate, RegisterView {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     let kToMyProfileSeg = "toMyProfileSeg"
+    
+    private lazy var registerViewModel:RegisterViewModel = {
+        return RegisterViewModel.init(view: self)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +47,8 @@ class CreateCredentialsController: UIViewController, UITextFieldDelegate {
         } else if textField === passwordTextField {
             if passwordTextField.text?.characters.count > -1 {
                 //service calse and //        performSegueWithIdentifier(<#T##identifier: String##String#>, sender: <#T##AnyObject?#>)
-                performSegueWithIdentifier(kToMyProfileSeg, sender: textField)
+//                performSegueWithIdentifier(kToMyProfileSeg, sender: textField)
+                self.registerViewModel.register(self.emailTextField.text!, password: self.passwordTextField.text!)
             }
         }
         return false
