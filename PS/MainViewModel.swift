@@ -36,6 +36,8 @@ class MainViewModel: NSObject {
     private func checkAccount () {
         let uuid = NSUUID().UUIDString
 
+        self.view.startInitial()
+        
         BackendManager.findByUid(uuid) { (result: AnyObject?, error: NSError?) -> Void in
             self.view.openRegisterUserScreen()
         }
