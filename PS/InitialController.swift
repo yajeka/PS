@@ -15,6 +15,7 @@ class InitialController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     
     let kToCreateCredentionsSeg = "toCreateCredentionsSeg"
+    let initialViewModel:MainViewModel = MainViewModel()
     
     
     override func viewDidLoad() {
@@ -29,6 +30,7 @@ class InitialController: UIViewController {
         
         createAcountButton.setBackgroundImage(UIImage(named: "button_login_pressed")!, forState: .Highlighted)
         signInButton.setBackgroundImage(UIImage(named: "button_login_pressed")!, forState: .Highlighted)
+        
         
     }
     
