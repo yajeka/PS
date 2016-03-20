@@ -12,6 +12,9 @@
 		70F6ABB01C9E92B100646FAA /* BackendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6ABAE1C9E92B100646FAA /* BackendManager.swift */; };
 		8D8CBD9D1C9EA28900E84508 /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8CBD9B1C9EA28900E84508 /* Master.storyboard */; };
 		8DFBB16D1C9EB4F1006E4D1A /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFBB16C1C9EB4F1006E4D1A /* CreatePostViewController.swift */; };
+		8DFBB16F1C9EB800006E4D1A /* CreatePostMoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFBB16E1C9EB800006E4D1A /* CreatePostMoodView.swift */; };
+		8DFBB1711C9EBB14006E4D1A /* CreatePostInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFBB1701C9EBB14006E4D1A /* CreatePostInputView.swift */; };
+		8DFBB1731C9EBF4D006E4D1A /* CreatePostScriptumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFBB1721C9EBF4D006E4D1A /* CreatePostScriptumView.swift */; };
 		A8AE0A131C9EA2CF003C7207 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */; };
 		A8AE0A141C9EA2CF003C7207 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */; };
 		F7215E2B1C9D5ECF007B0D07 /* InitialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7215E2A1C9D5ECF007B0D07 /* InitialController.swift */; };
@@ -44,6 +47,9 @@
 		70F6ABAE1C9E92B100646FAA /* BackendManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendManager.swift; sourceTree = "<group>"; };
 		8D8CBD9C1C9EA28900E84508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Master.storyboard; sourceTree = "<group>"; };
 		8DFBB16C1C9EB4F1006E4D1A /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		8DFBB16E1C9EB800006E4D1A /* CreatePostMoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostMoodView.swift; sourceTree = "<group>"; };
+		8DFBB1701C9EBB14006E4D1A /* CreatePostInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostInputView.swift; sourceTree = "<group>"; };
+		8DFBB1721C9EBF4D006E4D1A /* CreatePostScriptumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostScriptumView.swift; sourceTree = "<group>"; };
 		A8AE0A121C9EA2CF003C7207 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		ECB83E753367D31006F97B12 /* Pods_PS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7215E2A1C9D5ECF007B0D07 /* InitialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				8DFBB16C1C9EB4F1006E4D1A /* CreatePostViewController.swift */,
+				8DFBB16E1C9EB800006E4D1A /* CreatePostMoodView.swift */,
+				8DFBB1701C9EBB14006E4D1A /* CreatePostInputView.swift */,
+				8DFBB1721C9EBF4D006E4D1A /* CreatePostScriptumView.swift */,
 			);
 			path = Master;
 			sourceTree = "<group>";
@@ -331,12 +340,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8AE0A131C9EA2CF003C7207 /* MainViewModel.swift in Sources */,
+				8DFBB1731C9EBF4D006E4D1A /* CreatePostScriptumView.swift in Sources */,
+				8DFBB1711C9EBB14006E4D1A /* CreatePostInputView.swift in Sources */,
 				70F6ABAF1C9E92B100646FAA /* BackendManager.swift in Sources */,
 				8DFBB16D1C9EB4F1006E4D1A /* CreatePostViewController.swift in Sources */,
 				F7215E2B1C9D5ECF007B0D07 /* InitialController.swift in Sources */,
 				F7215E441C9DB89A007B0D07 /* AddPatnerController.swift in Sources */,
 				F7215E2F1C9D630D007B0D07 /* CreateCredentialsController.swift in Sources */,
 				F72AA3991C9C1D6700C4B25F /* AppDelegate.swift in Sources */,
+				8DFBB16F1C9EB800006E4D1A /* CreatePostMoodView.swift in Sources */,
 				F7215E421C9DA73F007B0D07 /* MyProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
